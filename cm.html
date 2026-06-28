@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click me!</title>
+    <link rel="stylesheet" href="cm.css">
+    <link rel="icon" type="image/png" href="clickMe.png?v=1">
+</head>
+<body>
+    <div id="screen-glow"></div>
+    
+    <center>
+        <h1 id="text">0</h1>
+    </center>
+    <button id="btn">click me!</button>
+    
+    <h1 id="cheer"></h1>
+    <h1 id="miss"></h1>
+
+    <div id="popup" class="popup">
+        <h1 id="popupText"></h1>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="bg2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="menuToggle" onmousedown="toggleMenu(event)">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="menu" class="hidden">
+        <h3>Select Difficulty</h3>
+        <div class="menu-item">
+            <select id="difficultySelect">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="expert">Expert</option>
+                <option value="god">God</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="flashbang"></div>
+
+    <h1 id="bg-text">CLICK ME!</h1>
+
+    <button id="mute" onclick="mute()">🔊</button>  
+
+    <div id="skinBox">
+        <button id="skinButton">Skins</button>
+        <div id="skinList">
+            <button onclick="changeSkin('neon')">Neon</button>
+            <button onclick="changeSkin('fire')">Fire</button>
+            <button onclick="changeSkin('ice')">Ice</button>
+            <button onclick="changeSkin('void')">Void</button>
+        </div>
+    </div>
+
+    <button id="difficultyBtn" onclick="toggleMenu(event)">difficulty</button>
+
+    <script src="cm.js"></script>
+</body>
+</html>
